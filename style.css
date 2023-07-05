@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 1340px;
+  text-align: center;
+}
+
+/* =======================START MAIN AREA============= */
+
+#site {
+  background-color: hsl(234, 17%, 12%);
+  height: 100vh;
+}
+
+#launch {
+  background-image: url(./images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0rem;
+}
+
+h1 {
+  font-family: "Red Hat Text";
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+#count {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.time1 {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: transparent;
+}
+
+.top{
+  border-radius: 0px 0px 10px 10px;
+}
+
+.top,
+.bottom {
+  font-size: 5rem;
+  font-weight: 700;
+  color: hsl(345, 95%, 68%); 
+}
+
+.bottom{
+  border-radius: 10px 10px 0px 0px;
+}
+
+.top,
+.bottom,
+.time1.top-flip,
+.time1 .bottom-flip {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+
+.top,
+.time1 .top-flip {
+  background-color: hsl(236, 21%, 26%);
+  border-top-right-radius: 0.1em;
+  border-top-left-radius: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.time1 .bottom-flip {
+  background-color: hsl(235, 16%, 14%);
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+
+.time1 .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 0.5ms ease-in forwards;
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+}
+
+@keyframes flip-top {
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.time1 .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 0.5ms ease-out 0.5ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+ to {
+    transform: rotateX(90deg);
+  }
+}
+
+.time-span {
+  margin-top: 1rem;
+  font-family: "Red Hat Text";
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: hsl(237, 18%, 59%);
+  display: inline-block;
+}
+
+.social {
+  background-image: url(./images/pattern-hills.svg);
+  padding: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.social i {
+  color: hsl(237, 18%, 59%);
+  cursor: pointer;
+}
+
+.social i:hover {
+  color: hsl(345, 95%, 68%);
+}
+
+/* =======================END MAIN AREA============= */
+/* =============================START FOOTER  AREA=========================== */
+.foot {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 20px;
+  color: hsl(0, 100%, 67%);
+  background-color: hsl(240, 10%, 16%);
+  
+}
+
+.foot a {
+  text-decoration: none;
+  color: hsl(39, 100%, 56%);
+}
+
+.foot a:hover {
+  color: hsl(300, 69%, 71%);
+}
+
+/* =============================END FOOTER  AREA=========================== */
+
+/* ===================START MEDIA QUERY============== */
+@media screen and (max-width: 375px) {
+  body {
+    min-width: 375px;
+  }
+
+  #count {
+    gap: 1rem;
+  }
+
+  .top, .bottom{
+    font-size: 3rem;
+  }
+
+  .social{
+    bottom: 0;
+  }
+}
+
+/* ===================END MEDIA QUERY============== */
